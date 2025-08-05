@@ -11,10 +11,10 @@ const userRoutes = require('./routes/user')
 const authRoutes = require('./routes/authroute');
 const transactionRoutes = require('./routes/transferRoute');
 const notificationRoutes = require("./routes/notificationRoute");
-app.use(cors(),express.json())
+app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({ origin: "https://buddypay-one.vercel.app/", credentials: true }));
+app.use(cors({ origin: "https://buddypay-one.vercel.app/"}));
 const server = http.createServer(app)
 initSocket(server);
 

@@ -7,7 +7,7 @@ const onlineUsers = new Map(); // userId -> array of socketIds
 function initSocket(server) {
   io = new Server(server, {
     cors: {
-      origin: "http://localhost:5173", // React app ka URL
+      origin: "https://buddypay-one.vercel.app", // React app ka URL
       methods: ["GET", "POST"],
     },
   });

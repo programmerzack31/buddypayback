@@ -14,7 +14,7 @@ const notificationRoutes = require("./routes/notificationRoute");
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors({ origin: "https://buddypay-one.vercel.app/"}));
+app.use(cors({ origin: "*" , credentials: true}));
 const server = http.createServer(app)
 initSocket(server);
 
